@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圣杯布局2---flex</title>
+    <!-- flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。 -->
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header,
+        footer {
+            background: gray;
+            flex-basis: 50px;
+        }
+        
+        #content {
+            display: flex;
+            /* 即 flex-grow: 1 */
+            /* flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。 */
+            flex: 1;
+        }
+        
+        #middle {
+            flex: 1;
+            background: green;
+        }
+        
+        #left {
+            /* 导航放到最左边 */
+            order: -1;
+            background: #c90;
+            /* flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。
+            浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。 */
+            /* 可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。 */
+            flex-basis: 200px;
+        }
+        
+        #right {
+            width: 150px;
+            background: #c99;
+            flex-basis: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>我是头部header</header>
+    <div id="content">
+        <main id="middle">我是中间...士大夫士大夫士大夫士大夫石帆胜丰当时的</main>
+        <nav id="left">我是左边...士大夫十分广泛广泛广泛共和国今后将根据天浴天浴天浴天浴昆明环境开会</nav>
+        <aside id="right">我是右边...哦破破破破破破破破破破</aside>
+    </div>
+    <footer>我是尾部footer</footer>
+</body>
+
+</html>
