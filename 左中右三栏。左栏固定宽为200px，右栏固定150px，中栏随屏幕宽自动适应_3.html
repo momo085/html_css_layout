@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>左中右布局---绝对定位</title>
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        
+        #content {
+            height: 100%;
+        }
+        
+        #middle {
+            position: absolute;
+            left: 200px;
+            right: 150px;
+            height: 100%;
+            background-color: red;
+        }
+        
+        #left {
+            width: 200px;
+            height: 100%;
+            float: left;
+            background-color: blue;
+        }
+        
+        #right {
+            width: 150px;
+            height: 100%;
+            float: right;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <div id="left">我是左侧内容我是左侧内容我是左侧内容我是左侧内容我是左侧内容</div>
+        <div id="middle">我是中间内容我是中间内容我是中间内容我是中间内容我是中间内容我是中间内容我是中间内容我是中间内容我是中间内容我是中间内容</div>
+        <div id="right">我是右侧内容我是右侧内容我是右侧内容我是右侧内容我是右侧内容我是右侧内容</div>
+    </div>
+</body>
+
+</html>

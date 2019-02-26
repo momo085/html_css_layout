@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>div 自适应高度 自动填充剩余高度</title>
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+        
+        .container {
+            height: 100%;
+            /* padding: 100px 0 0; */
+            /* box-sizing: border-box; */
+        }
+        
+        .top {
+            height: 100px;
+            background: rebeccapurple;
+            /* 方法一 */
+            /* position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; */
+            /* 方法二 */
+            /* margin: -100px 0 0; */
+        }
+        
+        .bottom {
+            /* height: 100%; */
+            /* 方法三 */
+            height: calc(100% - 100px);
+            background: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <a href="http://www.cnblogs.com/pangguoming/p/5695184.html">div 自适应高度 自动填充剩余高度</a> -->
+    <div class="container">
+        <div class="top">头部 top</div>
+        <div class="bottom">下部 bottom</div>
+    </div>
+</body>
+
+</html>

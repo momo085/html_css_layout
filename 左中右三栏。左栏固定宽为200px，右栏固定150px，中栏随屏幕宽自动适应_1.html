@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>左中右布局---利用div顺序和浮动</title>
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        
+        #content {
+            height: 100%;
+        }
+        
+        #left {
+            width: 200px;
+            height: 100%;
+            float: left;
+            background-color: red;
+        }
+        
+        #right {
+            width: 150px;
+            height: 100%;
+            float: right;
+            background-color: mistyrose;
+        }
+        /* 关键 */
+        
+        #middle {
+            height: 100%;
+            margin: 0 150px 0 200px;
+            background-color: saddlebrown;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <!-- 注意顺序 -->
+        <div id="left">我是左侧内容我是左侧内容我是左侧内容我是左侧内容我是左侧内容</div>
+        <div id="right">我是右侧内容我是右侧内容我是右侧内容我是右侧内容我是右侧内容我是右侧内容</div>
+        <div id="middle">我是中间内容我是中间内容我是中间内容我是中间内容我是中间内容我是中间内容我是中间内容我是中间内容我是中间内容我是中间内容</div>
+    </div>
+</body>
+
+</html>

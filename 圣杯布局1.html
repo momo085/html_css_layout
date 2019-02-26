@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圣杯布局1</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #header {
+            height: 30px;
+            background: green;
+        }
+        
+        #content {
+            /* 关键 */
+            height: calc(100% - 80px);
+        }
+        
+        .common-class {
+            height: 100%;
+        }
+        
+        #left {
+            width: 200px;
+            background: #fc0;
+            float: left;
+        }
+        
+        #middle {
+            background: #ff6;
+            margin: 0 150px 0 200px;
+        }
+        
+        #right {
+            width: 150px;
+            background: #fc0;
+            float: right;
+        }
+        
+        #footer {
+            height: 50px;
+            background: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">我是头部</div>
+    <div id="content">
+        <div id="left" class="common-class">我是左边</div>
+        <div id="right" class="common-class">我是右边</div>
+        <div id="middle" class="common-class">我是中间</div>
+    </div>
+    <div id="footer">我是尾部</div>
+</body>
+
+</html>
